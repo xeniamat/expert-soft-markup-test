@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.books-item {
+  background-color: #efefef;
+  width: 350px;
+  height: 500px;
+  margin: 15px;
+}
+
+.books-item_content {
+  height: 88%;
+  width: 85%;
+  margin: 25px;
+  background: #fff;
+  padding: 0 30px;
+  position: relative;
+}
+
+.books-item_new {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #03a9f5;
+  color: #fff;
+  font-size: 0.7em;
+  padding: 3px;
+}
+
+.books-item_actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.books-item_content:hover .books-item_actions {
+  visibility: visible;
+  opacity: 1;
+}
+
+.books-item_actions-eye,
+.books-item_actions-like,
+.books-item_actions-scale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #efefef;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.books-item_actions-eye:hover,
+.books-item_actions-like:hover,
+.books-item_actions-scale:hover {
+  transform: scale(1.1);
+  background: #62a2d2;
+  color: #efefef;
+}
+
+.books-item_image {
+  display: block;
+  max-height: 70%;
+  margin: 10px auto;
+  padding-top: 30px;
+}
+
+.books-item_info {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+}
+
+.books-item:hover .books-item_info {
+  bottom: 5px;
+}
+
+.books-item_tshirts {
+  font-size: 0.7em;
+  color: #414141;
+  text-align: center;
+}
+
+.books-item_star {
+  text-align: center;
+}
+
+.books-item_star-item {
+  display: inline-block;
+  color: #ffb503;
+}
+
+.books-item_title {
+  white-space: nowrap;
+  text-align: center;
+  overflow: hidden;
+}
+
+.books-item_prices {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.books-item_old-price,
+.books-item_new-price,
+.books-item_price {
+  display: inline-block;
+}
+
+.books-item_old-price {
+  text-decoration: line-through;
+}
+
+.books-item:hover .books-item_old-price {
+  opacity: 0;
+}
+
+.books-item:hover .books-item_new-price {
+  margin-left: 30px;
+  font-size: 1.3em;
+  color: #000000;
+}
+
+.books-item_new-price {
+  color: #f83d46;
+}
+
+.books-item_buy {
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.books-item_buy-button {
+  background: #62a2d2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.books-item_buy-icon {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.books-item_buy-text {
+  text-transform: uppercase;
+}
+
+.books-item:hover .books-item_buy {
+  height: 40px;
+}
+
+.books-item:hover .books-item_content {
+  height: 75%;
+}
